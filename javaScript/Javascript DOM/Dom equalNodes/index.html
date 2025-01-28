@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM ||isEqualNodes Methods </title>
+</head>
+<body>
+    <h2>DOM ||isEqualNodes Methods</h2>
+    <ul id="list-1">
+        <li>Mango</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>Apple</li>
+    </ul>
+    <ul id="list-2">
+        <li>Guava</li>
+        <li>Orange</li>
+        <li>PineApple</li>
+        <li>Apple</li>
+    </ul>
+
+    <script>
+        // Dom isEqualNodes => compare karna ka lea isEqualNodes use hota ha  isEqualNides hum ko ture or false ma answer return karta ha => types be hota ha 
+        // .same NodeType => is ma dono kie type same hone hayea 
+        // .same Nodename => is ma aghar done ka name same hoga to se compare ho ga 
+        // .same NodeValue => value be same ho gaye zaree ha 
+        // .same childNodes => be same hona ga 
+        // Example Code //
+        var target1 = document.getElementById("list-1").lastElementChild;
+
+        var target2 = document.getElementById("list-2").lastElementChild;
+         var equal = target1.isEqualNode(target2);
+         console.log(equal);
+         
+
+    </script> 
+</body>
+</html>

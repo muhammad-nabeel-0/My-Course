@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || cloneNode</title>
+</head>
+<body>
+    <ul id="list1">
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+        <li>Grapes</li>
+    </ul>
+    <ul id="list2">
+        <li>Carrot</li>
+        <li>Reddish</li>
+
+    </ul>
+
+    <script> 
+    // cloneNode copy karna ka lea use hota ha 
+        // cloneNode is lea use hota ha aghar hum ko koye element ko copy kar ka kis or gaka use karna ha is lea hum cloneNode ka use karta ha 
+        // Example Code //
+        var target = document.getElementById("list1").children[1];
+        var copyElement = target.cloneNode(true);
+         // cloneNode kie defult value flase hota ha or cloneNode ma false target kie ho element ko tags or attributes ko he return karna ha in ander kie value ko return ni tara || or cloneNode kie ture value ko hum use kar ka tags ka inder vale value ko be add kar sata ha 
+        console.log(copyElement);
+        document.getElementById("list2").appendChild(copyElement);
+        
+
+
+    </script>
+</body>
+</html>

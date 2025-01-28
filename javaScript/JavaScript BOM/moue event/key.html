@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #hello{
+        width: 300px;
+        height: 300px;
+        background: red;
+    }
+    
+</style>
+<body>
+    <h2>
+        Keyboard Event Property 
+    </h2>
+    <div id="hello"></div>
+    
+    <script>
+        //is property ko use kar ka hum safer keyboard ka onkeydown event ka use kar sata han 
+        //Example code //
+        var left  = 0;
+        var up = 0;
+        document.querySelector("body").addEventListener("keydown",function(e){
+            
+            
+            console.clear();
+            switch (e.key) {
+                case "ArrowLeft":
+                    left = left - 5;
+                    break;
+                    case "ArrowRight":
+                    left = left + 5;
+                    break;
+                    case "ArrowUp":
+                    up = up - 5;
+                    break;
+                    case "ArrowDown":
+                    up = up + 5;
+                    break;
+                default:
+                    console.log("press Arrow Key");
+                    break;
+            };
+            console.log("Left : " + left);
+            console.log("Up : " + up);
+            var target = document.getElementById("hello");
+            target.style.marginLeft = left + "px";
+            target.style.marginTop = up + "px";
+            target.style.width = e.key+"600px"
+            console.log(e.key);
+            
+        });
+            
+            
+    </script>
+</body>
+</html>

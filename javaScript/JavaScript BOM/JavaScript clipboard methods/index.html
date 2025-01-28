@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard Methods</title>
+</head>
+<style>
+    #myInput{
+        font-size: 21px;
+        padding: 20px;
+        width: 400px;
+    }
+    #box{
+        width: 300px;
+        height: 250px;
+        margin-top: 50px;
+        border: 1px solid #000;
+        background-color: aquamarine;
+        
+    }
+</style>
+<body>
+    <h2>JavaScript : ClipBoard Methods</h2>
+    <input type="text" id="myInput">
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit pariatur maxime aliquid odit recusandae asperiores saepe nulla? Molestias unde soluta, laudantium illo nulla non earum dolorum incidunt iste commodi perspiciatis harum laboriosam amet odit temporibus neque vel tempore eos et debitis quia, distinctio numquam recusandae. Magnam nulla iure quae hic.</p>
+    </div>
+    <script>
+        // javascript ma clipboard ka be events ha //
+        // onCopy => is ko hum is time use kara sata ha jab koye user humare websits sa koye text copy kara ga
+        // onCut => is ko hum is time use kara sata ha jab koye user humare websits sa koye text cut kara ga
+        // onPaste => is ko hum is time use kara sata ha jab koye user humare websits sa koye text paste kara ga
+        // Example Code //
+        var target  = document.getElementById("myInput");
+        target.addEventListener("copy",function(){
+            console.clear();
+            console.log("You Copy Text");
+            target.style.backgroundColor = "lightgreen";
+            
+        });
+        target.addEventListener("cut",function(){
+            console.clear();
+            console.log("You Cut Text");
+            target.style.backgroundColor = "pink";
+            
+        });
+        target.addEventListener("paste",function(){
+            console.clear();
+            console.log("You Paste Text");
+            target.style.backgroundColor = "lightblue";
+            
+        });
+        var targetBox  = document.getElementById("box");
+        targetBox.addEventListener("copy",function(){
+            targetBox.style.backgroundColor = "blueviolet";
+        })
+
+    </script>
+</body>
+</html>

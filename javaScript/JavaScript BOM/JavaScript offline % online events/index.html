@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline & Online</title>
+</head>
+<style>
+    #box{
+        width: 600px;
+        border: 2px solid rosybrown;
+        height: 300px;
+        background-color: cornflowerblue;
+        font-size: 20px;
+        text-align: center;
+    }
+</style>
+<body>
+    
+    <h2>
+        Offline & Online Events 
+    </h2>
+    <div id="box"></div>
+    <script>
+        var target = document.getElementById("box");
+        window.addEventListener("offline",function(){
+            target.innerHTML  = "You Are Offline";
+            target.style.backgroundColor = "lightgreen"
+        });
+
+        window.addEventListener("online",function(){
+            target.innerHTML  = "You Are Online";
+            target.style.backgroundColor = "lightblue"
+        });
+    </script>
+</body>
+</html>

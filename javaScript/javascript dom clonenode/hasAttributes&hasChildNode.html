@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | hasAttributes & hasChildNode</title>
+</head>
+<body>
+    <div id="test" class="test1">
+         <h2>Dom | hasAttributes & hasChildNode</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolores accusantium exercitationem inventore ut esse aliquam, rerum possimus qui culpa! Eos ullam, odio amet eaque quam vero voluptatum molestias ad.</p>
+    </div> 
+    <script>
+        // dom ka hasAttributes ko hum attributes ko check karna ka lea use kara ga is ka lea hum is ko tag ko target kara ga gis ka hum na attributes check karna ha hasAttributes check kara ha aghar attributes hota vo hum ko ture ma answer return kar ta ha aghar ni ho to false ma 
+        var testElement = document.getElementById("test");
+        var find = testElement.hasAttribute("class");
+        console.log(find);
+        //===============> <====================//
+        // is ma ak or method ha hasChildNides check karna ka lea use hota ha ka div ka inder ko value ha ka ni aghar div ka inder ko value ho ge to vo hum ko ture answer return kara ga aghar value ni he to false return kara ga or ak bade is am space or enter be count hota ha  //
+        var testElement = document.getElementById("test");
+        var find = testElement.hasChildNodes();
+        console.log(find);
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            background: lightcoral;
+            margin: 30px;
+        }
+    </style>
+    <title>Document</title>
+    <div id="box">
+
+    </div>
+</head>
+<body>
+<script>
+// mouse button events => is ma humra pass left button right butten or middle button hota ha ahgar hum na ha check karna ho ka user na is par kon sa button use kie ha is ma ak se property ate ha is ka name button is ka hum onmousedown event ka sate use kar sata ha ha property hum ko numeric value return kate ha aghar user na left button ka lea 0 middle button ka lea 1 or right button ka lea 2
+// Example Code //
+const target = document.getElementById("box");
+target.addEventListener("mousedown",function(e){
+    var text = e.button;
+    var color;
+
+    switch (text) {
+        case 0:
+            color = "red"
+            break;
+            case 1:
+                color = "yellow"
+            break;
+            case 2:
+                color = "blue"
+            break;
+        default:
+            color = "lightcoral"
+            break;
+    }
+    c
+    console.log(color);
+    target.style.backgroundColor = color;
+    
+
+})
+
+</script>
+</body>
+</html>

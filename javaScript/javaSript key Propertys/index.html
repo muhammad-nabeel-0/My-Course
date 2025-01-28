@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    li{
+        margin-top: 10px;
+        
+    }
+    .box{
+        width: 300px;
+        height: 300px;
+        border: 2px solid green;
+        background-color: blueviolet;
+    }
+</style>
+<body>
+    <h2>JavaScript : Key Methods</h2>
+    <ul>
+        <li>ctrlKey</li>
+        <li>ShiftKey</li>
+        <li>altKey</li>
+        <li>metaKey</li>
+        <!-- metakey ko window key be kaha gata ha -->
+    </ul>
+    <div class="box"></div>
+    <script>
+        // example ka lea hum ka pass ak div ha user na aghar is par click karna ha to mouse ka sate keyboard ka speical key ka be use kara is ka lea key ka methods use hota ha is ko mouse or keyboard ka event ka sate use kar sata ha 
+        // ab hum div ko target kar ga .. aghar hum key ka bager click ka ga to false ma value return hote or aghar hum key ka sata use kara ga to ture ma return hoge....../
+        var target = document.querySelector(".box");
+        target.addEventListener("click",function(e){
+            var ctrl = e.ctrlKey;
+            console.clear();
+            
+            if (ctrl) {
+                console.log("You Pressed Control Key."); 
+            }else {
+                console.log("You not Pressed Control Key.");
+            }
+            var meta = e.metaKey;
+            if (meta) {
+                console.log("You Pressed Window Key."); 
+            }else {
+                console.log("You not Pressed Window Key.");
+            }
+            var shift = e.shiftKey;
+            if (shift) {
+                console.log("You Pressed Shift Key."); 
+            }else {
+                console.log("You not Pressed Shift Key.");
+            }
+            var alt = e.altKey;
+            if (alt){
+                console.log("You Pressed Alt Key."); 
+            }else {
+                console.log("You not Pressed Alt Key.");
+            }
+        });
+    </script>
+</body>
+</html>

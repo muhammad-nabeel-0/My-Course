@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Bom</title>
+</head>
+<body>
+    <button onclick="openWindow()">Open Window</button>
+    <button onclick="moveWindow()">Move Left</button>
+    <button onclick="rightWindow()">Move Right</button>
+    <button onclick="resizeWindow()">ReSize</button>
+
+    <script>
+        // Bom => Browser Object Model 
+        // Bom ma hum window ka method use karta 
+        // window Height & width Methods //
+        //.innerHeight => innerHeight ka browser ka viewHeight ka tora para kam karta  ha is ma browser 
+        //.innerWidth => innerWidth browser ka viewWidth ka lea use karta ha 
+        //.outerWidth => outerWidth 
+        //.outerHeight =>
+
+        // Example Code //
+        var iHeight  = window.innerHeight;
+        console.log(iHeight);
+        var oHeight  = window.outerHeight;
+        console.log(oHeight);
+        // window open() & close() //
+        // open Method ko use kar kie Example //
+        // window.open(URL,name,specs)
+        var myWindow;
+        function openWindow(){
+           myWindow = window.open( "","","width=800px,height=500px,left=100px,top=100px");
+           myWindow.document.write("<p>this is myWindow</p>")
+        }
+        function moveWindow(){
+        myWindow.moveBy(20,0);
+        myWindow.focus();
+            
+        };
+        function rightWindow(){
+            myWindow.moveBy(20,0);
+            myWindow.focus();
+
+        }
+        // resizeBy method ma preives width or height add hota ha 
+        function resizeWindow(){
+            myWindow.resizeBy(400,400);
+        }
+        // window moveBy() postion relative ka sata use hote ha 
+        // window moveTo position absoulte ka sate kam karte ha //
+
+        
+
+        
+        </script>
+</body>
+</html>

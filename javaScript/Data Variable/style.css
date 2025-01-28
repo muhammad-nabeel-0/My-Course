@@ -1,0 +1,20 @@
+button{
+    padding: 10px 20px;
+    border-radius: 4px ;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: blueviolet;
+    color: black;
+    transition: .5s;
+}
+button:hover{
+    background-color: black;
+    color: blueviolet;
+    border: transparent;
+    transform: scale(1.09);
+
+}
+button:active{
+    transform: translateY(5px);
+}

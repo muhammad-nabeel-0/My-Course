@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        #outer{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: aquamarine;
+        }
+        #inner{
+            width: 300px;
+            height: 300px;
+            margin: 100px auto 0;
+            background-color: brown;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <h2 id="nice">Outer</h2>
+        <div id="inner">
+            <h2 id="bgc">Inner</h2>
+        </div>
+    </div>
+    <script>
+        document.querySelector("#outer").addEventListener('click',function(){
+            alert("outer div");
+        },true);
+
+        document.querySelector("#inner").addEventListener('click',function(op){
+            document.getElementById("bgc").style.background = "red";
+        },false);// useCapture ko function ka end hona ka bage 
+
+        // Dom eventListener method ma ak or function ata ha is kom hum eventListener ko remove karna ka lea use karta ha 
+        // removeEventListener ===> ko use kar ka hum eventListener ko remove kar sata ha //
+      document.getElementById("#inner").addEventListener('click',function(){
+        document.getElementById("#inner").removeEventListener("mouseleave",op);  
+
+      });
+      
+
+    </script>
+</body>
+</html>

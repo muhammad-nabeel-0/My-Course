@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollWidth & scrollHeigth</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            background: red;
+            overflow: auto;
+            padding: 10px;
+            border: 10px solid;
+        }
+        .inner-box{
+            width: 700px;
+            height: 50px;
+            background: greenyellow;
+        }
+        .example{
+            width: 300px;
+            height: 300px;
+            border: 2px solid blue;
+            margin-top: 20px;
+            background: #3b0d0d;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="inner-box"></div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi possimus, consectetur, vel quo laudantium rerum a quaerat blanditiis ullam dicta iste officia adipisci quasi accusantium error deserunt obcaecati temporibus perferendis hic exercitationem sunt numquam provident delectus. Aspernatur, libero veritatis temporibus laboriosam magnam minima, adipisci ab voluptatum quidem sapiente eum tenetur? Voluptates rem voluptate accusamus minus aliquam voluptatum officia vero inventore sed! Molestias voluptatum odio ea nihil, reprehenderit cum nemo illum quisquam sequi sapiente deserunt sit dignissimos qui! Soluta, ab magni rem debitis architecto in maxime neque qui alias veritatis fuga. Facere voluptatem velit nesciunt sequi quos, veniam tempore autem vitae ullam repellat numquam suscipit quia excepturi quaerat! Tempore dicta necessitatibus velit impedit quo quisquam consequuntur voluptatum quam illo illum, eum eos porro ex accusantium, dignissimos repellendus nihil reprehenderit repellat, dolores atque maxime? Quaerat quas consectetur incidunt reiciendis ex sint obcaecati repellat ad corrupti iusto tenetur a veniam, asperiores ipsum minima voluptatem rem nemo nulla quod vitae deserunt sit veritatis! Omnis delectus reprehenderit veniam nobis ipsum magni eos? Sed soluta ad voluptatibus labore officiis provident eos qui, eaque animi vitae ratione, consequatur, saepe eveniet voluptas quos dolorum! Minus eligendi quaerat mollitia voluptatem suscipit provident hic blanditiis dignissimos, ipsum repellat at modi nobis ducimus vel molestiae sunt recusandae consectetur molestias, voluptates neque sit nulla aut? Amet accusamus, neque dicta maxime consequatur sint. Suscipit voluptas ut cupiditate repellendus! Maxime deleniti tempora ut, ab fuga vitae molestiae error! Animi asperiores repellendus quo quaerat inventore modi. Alias veritatis laudantium harum natus sed, ipsam corporis libero voluptates aperiam nulla ratione odio beatae minus voluptatibus non est praesentium maxime perferendis quisquam cumque porro quae saepe, repellat enim. Rem voluptas qui ipsam, iusto perspiciatis cupiditate excepturi harum quod, dignissimos ad sit laudantium. Saepe distinctio ratione voluptas reprehenderit omnis, fugiat esse ut labore mollitia qui iusto quaerat expedita corporis, non consectetur aspernatur dolore minus, accusantium aperiam nemo quos incidunt quis laboriosam! Excepturi, recusandae doloribus minus facilis nulla repellendus reprehenderit quia temporibus quod voluptate corrupti obcaecati a dicta voluptatibus dolor, deserunt saepe! Assumenda natus odio eius fugit molestiae. Temporibus sint quidem, mollitia dicta dolorum explicabo est accusantium modi ratione perferendis, distinctio velit ea sed libero ex natus laboriosam sit a eaque, nobis numquam error officia pariatur vitae! Vitae nostrum eos asperiores, ducimus corrupti laboriosam pariatur atque voluptas, placeat aliquam quo, corporis nam ea maiores cum optio saepe quidem. Repellendus laboriosam placeat officiis ad temporibus quisquam, voluptatum quasi, modi nisi vitae cupiditate. Eius necessitatibus tenetur consectetur neque atque, aut dignissimos. Rem illum, voluptas dolorum quibusdam maxime eos minus ab? Quos odio vitae consectetur quasi illum, maxime tempore minus neque provident sit aliquam obcaecati sunt ducimus ullam corporis, commodi culpa nemo fugit minima modi quibusdam! Consectetur, nostrum cupiditate omnis veritatis harum a quam molestias doloremque id? Dicta, iure! Temporibus, voluptate? Dolores, quam. Aliquam quo eaque quod culpa quos provident asperiores quasi quas illum saepe consequuntur sed maxime molestias repellat eum nobis repudiandae ipsum, praesentium hic dicta facilis doloremque labore fugit modi. Cumque officiis, modi in sapiente harum reiciendis. Repellat, iste a molestias quae expedita iure vero error vel ab corporis deleniti omnis totam id veniam voluptas! Aspernatur praesentium veritatis labore, totam quam voluptate nostrum, libero autem soluta amet at minus ipsum rem nisi, veniam error quo! Quaerat recusandae dolorum minus repellat temporibus suscipit, doloribus tempore fuga iusto numquam dolorem dolores natus animi rem, nihil repellendus soluta sunt atque incidunt aperiam possimus quae quibusdam! Ea eligendi iusto repellendus architecto, vitae magnam eum quidem aspernatur et odit provident minima dolorem iure veritatis officiis earum, reiciendis dolores nulla amet adipisci? Magni debitis aut, omnis in, et amet eligendi doloremque itaque enim at dolorem sequi ea.</p>
+      
+    </div>
+    <div class="example"></div>
+    <script>
+        // scroll ka method ma width or height ko use karta ha is method ma total height or width find karna  k lea use karta ha  is ko hum variable ka sate use karta ha 
+        const box = document.querySelector("#box");
+        const scroll_width = box.scrollWidth;
+        const scroll_height = box.scrollHeight;
+        console.log("Scroll Width :" + scroll_width);
+        console.log("Scroll height :" + scroll_height);
+        // =======> <========//
+        // offsetWidth & offsetHeight //
+        // is method ko use kar ka hum div kie width or height find karnka lea use hota ha  or ha hum total width or height return kare ge in my padding border or scrollbar 
+        const targrt = document.querySelector("#box");
+        var width = targrt.offsetWidth;
+        var height =  targrt.offsetHeight;
+        console.log("Total Width : " +width);
+        console.log("Total Height : " +height);
+        // =======> <========//
+        // client width inner width find karna ka lea use karta ha is ma padding add hote bas
+        // client height inner height find karna ka lea use karta ha ma padding add hote bas
+        var width = targrt.clientWidth;
+        var height =  targrt.clientHeight;
+        console.clear();
+        console.log("Client Width : " +width);
+        console.log("Client Height : " +height);
+        // =======> <========//
+        // clientX & clientY //
+        // curser ki postion ka lea  clientX and clientY use hota ha is ka sata mouse ka event ka sate use kara sata ha methods viewport ko use kar ka vlaue return karta ha  
+        document.addEventListener('mouseout',function(e){
+            var x  = e.clientX
+            var y  = e.clientY
+            console.clear();
+            console.log("ClientX :" + x);
+            console.log("ClientY :" + y);
+            
+        })
+        // =======> <========//
+        // pageX & pageY propertys //
+        // is ko hum mouse event ka sate he use kar sata ha pageX or pageY mouse kie postion ko find karna ka lea use hota 
+        // is viewport ko use ni kie gata ha //
+        // Example Code //
+        document.addEventListener("mousemove",function(e){
+            var f  = e.pageX;
+            var k  = e.pageY;
+            console.clear();
+            console.log("Page X :" + f);
+            console.log("Page Y :" + k);
+            
+        })
+        // =======> <========//
+        // screenX & screenY //
+        // is propert ma ha hum computer kia screen ka hasbe sa value return karo ga ..
+        document.addEventListener("click",function(e){
+            
+            var no = e.screenX;
+            var yes = e.screenY;
+            console.clear();
+            console.log("Screen X :" + no);
+            console.log("Screen Y :" + yes);
+            
+        })
+        // =======> <========//
+         // offsetX & offsetY propetys //
+         // is property ma aghar hum ko mouse kie postion ko find karna ka lea use karta ha example ka lea aghar hum ka pass ak div ha or hum is innder koye mouse ka event banya ha or hum ko curser kie postion find karne hoto is ka lea is propertys ka use karta ha is ka hum div ko target kara ga ..
+
+         // Example code //
+         var target = document.querySelector(".example");
+         target.addEventListener("mouseout",function(e){
+            var demo = e.offsetX;
+            var demo1 = e.offsetY;
+            console.log("OffSet X :" +demo);
+            console.log("OffSet Y :" +demo1);
+            
+
+         });
+         
+
+
+
+        
+        
+    </script>
+</body>
+</html>

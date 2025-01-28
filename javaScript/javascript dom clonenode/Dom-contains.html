@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom||Contanis</title>
+</head>
+<style>
+    #outer{
+        width: 500px;
+        height: 500px;
+        margin: 20px auto;
+        background: grey;
+        padding: 20px 40px;
+        
+    }
+</style>
+<body>
+    <div id="outer">
+        <h2>DOM: contanis( ) methods </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quos veritatis, impedit excepturi necessitatibus incidunt blanditiis quam sint non nesciunt.</p>
+
+
+        <p id="inner">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veritatis ab officia recusandae obcaecati quidem sapiente vel! Laudantium atque, excepturi quas obcaecati rerum omnis ut minima, debitis nisi placeat laborum nobis, unde eligendi minus veritatis hic impedit odit perferendis cupiditate voluptates sit culpa quasi dolorem facere! Necessitatibus repellendus at pariatur.</p>
+    </div>
+    <script>
+        // Dom ma contanis methods ko hum is lea ues karta hum parent ko target kar ka is ko inder koye be div / className ko find karna ka lea ues karta ha or contains() hum ture or false ma value return karta ha 
+        // Example Code //
+        var parentElement = document.getElementById("outer");
+        var targert = document.getElementById("inner");
+        var find =parentElement.contains(targert);
+        console.log(find);
+        
+    </script>
+</body>
+</html>

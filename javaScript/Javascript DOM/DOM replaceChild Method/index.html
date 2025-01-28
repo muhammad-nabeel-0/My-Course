@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Child | Method</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Grapes</li>
+        <li>Banana</li>
+    </ul>
+    <script>
+        var newElement = document.createElement("li");
+        var newText = document.createTextNode("Mango");
+        newElement.appendChild(newText);
+        var list = document.getElementById("list");
+        var oldElement = list.children[3];
+        list.replaceChild(newElement,oldElement); // is tara hum child ko replace kar sata ha //
+        //=========> <============//
+        // is ka bade hum childremove method ko test kara ga //
+        var target = document.getElementById("list")
+        var demo = target.children[0]; // is tara hum children ko remove karna ka lea use karta ha
+        list.removeChild(demo);
+
+    </script>
+</body>
+</html>

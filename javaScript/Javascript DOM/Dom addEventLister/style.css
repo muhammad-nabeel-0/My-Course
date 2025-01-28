@@ -1,0 +1,26 @@
+h1{
+    background: red;
+    text-align: center;
+}
+h2{
+    background: gray;
+}
+.contanier{
+    margin: 30px 200px;
+    position: relative;
+}
+.contanier .box1{
+    width: 300px;
+    border: 2px solid;
+    height: 200px;
+    background-color: aqua;
+}
+.box2{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 200px;
+    height: 100px;
+    background-color: brown;
+}
+

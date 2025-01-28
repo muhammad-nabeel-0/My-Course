@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            border: 2px solid #6a0a0a;
+            background: darkgreen;
+            
+        }
+        #box1{
+            width: 300px;
+            height: 300px;
+            border: 2px solid #6a0a0a;
+            background: rgb(0, 27, 100);
+            overflow: auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Widnow pageYOffset & pageXOffset methods</h2>
+    <div id="box">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere corrupti ex officiis tenetur doloribus, minus aut expedita alias, fugiat qui minima animi cum quos! Vitae, tempore illo tenetur est debitis fugiat recusandae quos delectus! Ullam, consectetur nobis aspernatur amet dolorem perspiciatis aut nihil repellat? Temporibus, itaque debitis !</p>
+    </div>
+    <div id="box1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse laborum quam excepturi consequuntur eaque optio distinctio quod totam debitis. Necessitatibus dicta, itaque tenetur est quia illo iusto facere atque ex? Quisquam voluptatem repellat at temporibus illo velit libero! Pariatur, mollitia! Veniam, enim nisi natus est voluptas dicta. Sit doloremque eligendi amet laboriosam quos odit architecto reprehenderit maiores aspernatur minima totam, magni obcaecati incidunt. A at molestias voluptatum quam quibusdam laboriosam sunt dolore adipisci eum! Ea minus animi molestias! Distinctio dolore perferendis praesentium aut hic fugit quo corporis, obcaecati sunt nobis repudiandae, necessitatibus dolorem? Repellendus sed fuga ullam, rem itaque debitis consequuntur optio incidunt omnis distinctio! Deserunt suscipit soluta tempora magnam, vero exercitationem ipsa sit excepturi deleniti quaerat, eligendi impedit iste totam doloribus tempore mollitia, beatae laborum maiores ducimus aut similique dolorum temporibus! Dolor minima temporibus vitae sunt eveniet perspiciatis, omnis repudiandae ut nemo eos suscipit, eaque tempora doloremque ex quae alias quo quisquam tenetur necessitatibus. Cum, minus accusamus aut dolor, corrupti earum beatae praesentium, ducimus quos alias laboriosam! Ullam, ab? Odio praesentium inventore laudantium cupiditate optio id. Minima, impedit laboriosam quam nisi perspiciatis velit! Nobis possimus expedita beatae optio eligendi cumque corrupti. Sed voluptate est perferendis ad, molestiae asperiores adipisci?</p>
+    </div>
+   
+    <script>
+        // window ka method ma sa pageYOffset or pageXOffset scroll check karna kaya lea use hota ha is ko scroll kanta hova ha is ko check karna ka lea use hota ha 
+        window.addEventListener('scroll',function(){
+            console.clear()
+            console.log("PageYOffset : " + window.pageYOffset);
+            console.log("PageXOffset : " + window.pageXOffset);
+            
+        });
+        // offsetTop & offsetLeft method top or left ka distance find karna ka lea use karta ha is ko hum is lea use karta ha ta ka hum top or left ka distance find kar saka ...\/
+        const box  = document.querySelector("#box")
+        console.log("Box offsetTop : " + box.offsetTop);
+        console.log("Box offsetLeft : " + box.offsetLeft);
+
+        // scrollTop or scrollLeft scroll ka distance find karna ka lea  is ka use hum zafer div ma karta ha understand
+        const boxData  = document.querySelector("#box1");
+        boxData.addEventListener('scroll',()=>{
+            console.clear();
+            console.log("scrollTop : " + boxData.scrollTop);
+            
+        })
+
+        
+
+      
+    
+        
+
+    </script>
+</body>
+</html>
