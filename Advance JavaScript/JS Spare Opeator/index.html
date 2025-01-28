@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Spread Operator</title>
+</head>
+<body>
+    <h2>JS : Spread Operator</h2>
+    <script>
+    // Spread Operator array kie value aghar hum ko value kie argoment ka tor par ... ka sata array ko pass karna is ko hum ... ka sata use kar sata ha is ka lea hum Spread Operator is ko args ka sata use karta ha kise be array ko Spread kara ka argements ko pass karta ha
+    // Example Code //
+    function sum(name,...args){
+        console.log(arguments);
+        
+        document.write(`Class : ${name} : `);
+
+        let sum = 0;
+        for(let i in args){
+         sum += args[i]; 
+        }
+        document.write(sum)    
+    };
+    let arys = [20,40,60,30]
+    sum("BA",...arys);
+    
+
+    </script>
+</body>
+</html>

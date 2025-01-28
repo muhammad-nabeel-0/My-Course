@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Promise All</title>
+</head>
+<body>
+    <h2>JS : Promise All Methods</h2>
+    <script>
+    // js ka promise.all() methods ma multiply promise bana sata ha aghar sara promise ture ho ga to then vala function run hoga aghar in ma sa koye ak be promise false hova to catch wala function call hoga 
+    // Example Code //
+    let p1 = new Promise((reslove,rejected)=>{
+        setTimeout(()=>{
+            console.log('This first promise is resloved');
+            reslove(10);
+            
+        },1 * 1000);
+    })
+
+    let p2 = new Promise((reslove,rejected)=>{
+        setTimeout(()=>{
+            console.log('This second promise is resloved');
+            reslove(20);
+            
+        },2 * 1000);
+    });
+
+    let p3 = new Promise((reslove,rejected)=>{
+        setTimeout(()=>{
+            console.log('This third promise is resloved');
+            reslove(30);
+            
+        },3 * 1000);
+    })
+    var total = 0;
+
+    Promise.all([p1,p2,p3]).then((result)=>{
+        for(var i in result){
+            total += result[i];
+
+        }
+        console.log(`Results : ${result}`);
+        console.log(`Total : ${total}`);
+        
+    }).catch((error)=>{
+        console.log(`Error : ${error}`);
+        
+    });
+    </script>
+</body>
+</html>

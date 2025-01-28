@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Rest Operator </title>
+</head>
+<body>
+    <h2>JS : Rest Operator</h2>
+<script>
+    // function ma multiple Arguments ko control karna ka lea Rest Opertor ka use karta ha is ka three dot sa start karta ha 
+    // Example Code //
+    // Without Rest Operator //
+    function sum(){
+        console.log(arguments);
+        let sum = 0;
+        for(let i in arguments){
+            sum += arguments[i];
+            console.log(sum);
+        }
+    }
+    sum("Nabeel",20,30,40);
+    // By Using Rest Opertor //
+    function valueData(name,...args){
+        document.write(`Name : ${name}: Marks : `);
+        let data = 0;
+        for(let u in args){
+            data +=args[u]
+        }
+        document.write(data + "<br>")
+        
+    };
+    valueData("Nabeel",20,40,60,80);
+    valueData("Usman",20,40,60,65);
+</script> 
+</body>
+</html>

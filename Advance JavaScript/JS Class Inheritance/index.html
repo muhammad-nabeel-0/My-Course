@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Class Inheritance </title>
+</head>
+<body>
+    <h2> JS : Class Inheritance </h2>
+    <script>
+        // class inheritance ko hum is lea use karta ha aghar hum ko ak se class kia methods or propertys ko multi-level inheritance ka lea use karna ho ho // aghar hum na class kia methods or Propertys ko or be classes ma use karna ha is ka lea is method ka use karta ha is sata hum ak spical word ko use karna ho ga is ka name ha extends is hum basic class kia method or propertys ko use kar sata ha 
+        // Example Code //
+        class employee{
+            constructor(name,age,salary){
+                this.empName = name;
+                this.empAge = age;
+                this.empSalary = salary;
+                console.log(`Constructor : Employee`);
+            }
+            info(){
+                document.write(`<h3>Employee Class</h3>
+                  Name : ${this.empName} <br>
+                  Age : ${this.empAge} <br>
+                  Salary : ${this.empSalary} <br> `)
+                
+            }
+        };
+        class manager extends employee{
+            info(){
+            let ta = 1000;
+            let pa = 300;
+            let totalSalary = this.empSalary+ta+pa
+                document.write(`<h3>Manager Class</h3>
+                  Name : ${this.empName} <br>
+                  Age : ${this.empAge} <br>
+                  Salary : ${totalSalary} <br> `)
+                  
+                
+            }
+        }
+        class test extends manager{
+            
+
+        }
+        let v = new employee("Ahmad",20,18000);
+        let f = new manager("Nabeel",19,20000);
+        let g = new test("Hamza",40,40000)
+        f.info()
+        v.info();
+        g.info()
+        
+    </script>
+</body>
+</html>

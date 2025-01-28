@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Destructuring Array</title>
+</head>
+<body>
+    <h2>
+        JS : Destructuring Array 
+    </h2>
+    <script>
+        // Js Destructuring Array is method ko use kara ka hum index ka baja ak new array banya ga or is ko variable ka sata add kar da ga is ko hum nested array ma be use kar sata ha /
+        // Example Code //
+        let user = ["Ali Hassan",33,"Lahore"];
+        let [name,age = 20,city] = user; // is tara hum variable ko defult value be add kara sata ha age = 20
+        console.log(name);
+        console.log(age);
+        console.log(city);
+        // By Using Function //
+        function demo(){
+            return ["Usman",32,"Karachi"];
+        }
+        let [fnmae,age1,city1] = demo();
+        console.log(demo());
+        console.log(fnmae);
+        console.log(age1);
+        console.log(city1);
+        
+        
+    </script>
+</body>
+</html>

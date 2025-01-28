@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Class Inheritance - Real-Life Example</title>
+</head>
+<body>
+    <h2>JS: Class Inheritance - Company Hierarchy</h2>
+    <script>
+        // Base class for all employees
+        class Employee {
+            constructor(name, age, baseSalary) {
+                this.name = name;
+                this.age = age;
+                this.baseSalary = baseSalary;
+            }
+            showInfo() {
+                document.write(`<h3>Employee Details</h3>
+                  Name: ${this.name} <br>
+                  Age: ${this.age} <br>
+                  Base Salary: $${this.baseSalary} <br>`);
+            }
+        }
+
+        // Manager class that extends Employee
+        class Manager extends Employee {
+            constructor(name, age, baseSalary, teamSize) {
+                super(name, age, baseSalary); // Call Employee constructor
+                this.teamSize = teamSize;
+                this.allowances = 2000; // Fixed allowance for Managers
+            }
+            showInfo() {
+                let totalSalary = this.baseSalary + this.allowances;
+                document.write(`<h3>Manager Details</h3>
+                  Name: ${this.name} <br>
+                  Age: ${this.age} <br>
+                  Team Size: ${this.teamSize} <br>
+                  Total Salary: $${totalSalary} <br>`);
+            }
+        }
+
+        // Director class that extends Manager
+        class Director extends Manager {
+            constructor(name, age, baseSalary, teamSize, companyCar) {
+                super(name, age, baseSalary, teamSize); // Call Manager constructor
+                this.companyCar = companyCar;
+                this.bonus = 5000; // Fixed bonus for Directors
+            }
+            showInfo() {
+                let totalSalary = this.baseSalary + this.allowances + this.bonus;
+                document.write(`<h3>Director Details</h3>
+                  Name: ${this.name} <br>
+                  Age: ${this.age} <br>
+                  Team Size: ${this.teamSize} <br>
+                  Company Car: ${this.companyCar} <br>
+                  Total Salary: $${totalSalary} <br>`);
+            }
+        }
+
+        // Creating objects
+        let emp = new Employee("John Doe", 25, 3000);
+        let mgr = new Manager("Jane Smith", 35, 5000, 10);
+        let dir = new Director("Alice Johnson", 45, 10000, 50, "Tesla Model S");
+
+        // Displaying information
+        emp.showInfo();
+        mgr.showInfo();
+        dir.showInfo();
+    </script>
+</body>
+</html>

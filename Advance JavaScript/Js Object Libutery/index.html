@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literals</title>
+</head>
+<body>
+    <h2>JS : Object Literals</h2>
+    <script>
+        // Object Literals //
+        // Object Old Methods //
+        let name = "Ali";
+        let course = "BSCS";
+        const obj = {
+            name,
+            course,
+        };
+        console.log(obj);
+        // Example No2 //
+        let n = "name";
+        const obj1 = {
+            ["Full"+n]:"Ahmad",
+            courses:"BS SoftWare",
+            /*detail:function(){  this old method */
+            "deatil show"(){ // new method 
+            return `${this.Fullname} is Student of ${this.courses}`
+            }
+        };
+        console.log(obj1);
+        console.log(obj1["deatil show"]());
+        // Example NO 3 //
+        let fname = "Hamza";
+        let lname = "Ali";
+        let className = "ICS";
+        function student(fname,lname,className){
+            let fullName = fname + " " + lname;
+            return {fullName,className};
+        }
+        let data = student(fname,lname,className);
+        console.log(data);
+        
+        
+    </script>
+</body>
+</html>
